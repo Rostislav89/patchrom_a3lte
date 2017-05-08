@@ -1971,6 +1971,8 @@ system/priv-app/Eleven 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x
 system/priv-app/Eleven/Eleven.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/ExternalStorageProvider 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/ExternalStorageProvider/ExternalStorageProvider.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/FixSignal 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/priv-app/FixSignal/FixSignal.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/FusedLocation 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/FusedLocation/FusedLocation.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/InputDevices 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
