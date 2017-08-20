@@ -9,12 +9,12 @@ private-phone-apps := \
 	CertInstaller \
 	DocumentsUI \
 	KeyChain \
+	FM2 \
 	LatinIME \
 	LiveWallpapers \
 	PacProcessor \
 	PicoTts \
 	PrintSpooler \
-	shutdownlistener \
 	Stk \
 	telresources \
 	TimeService \
@@ -27,16 +27,11 @@ private-phone-priv-apps := \
 	CellBroadcastReceiver \
 	CMAudioService \
 	CMSettingsProvider \
-	CNEService \
 	com.qualcomm.location \
 	ExternalStorageProvider \
-	FMRadio \
 	FusedLocation \
-	IMSEnabler \
 	InputDevices \
-	ProximityCalibrate \
 	ProxyHandler \
-	qcrilmsgtunnel \
 	Screencast \
 	SharedStorageBackup \
 	Shell \
