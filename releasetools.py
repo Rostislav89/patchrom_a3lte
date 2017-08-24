@@ -8,6 +8,13 @@ def RemoveDeviceAssert(info):
       edify.script[i] = ''
       return
 
+def AddAssertions(info):
+    edify = info.script
+    for i in xrange(len(edify.script)):
+        if " ||" in edify.script[i] and ("ro.product.device" in edify.script[i] or "ro.build.product" in edify.script[i]):
+            edify.script[i] = edify.script[i].replace(" ||", ' || getprop("ro.build.product") == "a3ltexx" || getprop("ro.build.product") == "a3lte" || getprop("ro.build.product") == "a3ulte" || getprop("ro.build.product") == "a3ultexx" ||')
+            return
+
 def AddArgsForSetPermission(info):
   edify = info.script
   for i in xrange(len(edify.script)):
@@ -53,8 +60,8 @@ def IncrementalOTA_InstallRecovery(info):
 def FullOTA_InstallEnd(info):
     WritePolicyConfig(info)
     #AddArgsForSetPermission(info)
-    #AddAssertions(info)
+    AddAssertions(info)
 
 def IncrementalOTA_InstallEnd(info):
     #AddArgsForSetPermission(info)
-    #AddAssertions(info)
+    AddAssertions(info)
