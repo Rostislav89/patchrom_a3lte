@@ -8,3 +8,6 @@ build_prop_file=$TARGET_FILES_DIR/SYSTEM/build.prop
 OTHER_DIR=$PWD/other
 
 cp -f other/file_contexts out/target_files/META/
+
+#Added device features
+13	cp -f other/a3lte.xml out/target_files/SYSTEM/etc/device_features
