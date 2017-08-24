@@ -2,6 +2,9 @@
 
 BOOTIMG=$1
 
+rm -rf $TARGET_BOOT_DIR
+mkdir -p $TARGET_BOOT_DIR
+$UNPACKBOOTIMG -i $BOOTIMG -o $TARGET_BOOT_DIR > /dev/null
 gunzip $TARGET_BOOT_DIR/boot.img-ramdisk.gz
 mkdir -p $TARGET_BOOT_DIR/ramdisk
 cd $TARGET_BOOT_DIR/ramdisk
