@@ -12,6 +12,7 @@ private-phone-apps := \
 	FM2 \
 	LatinIME \
 	LiveWallpapers \
+	NfcNci
 	PacProcessor \
 	PicoTts \
 	PrintSpooler \
@@ -36,5 +37,6 @@ private-phone-priv-apps := \
 	SharedStorageBackup \
 	Shell \
 	Snap \
-	StatementService 
+	StatementService \
+	Tag
 	
