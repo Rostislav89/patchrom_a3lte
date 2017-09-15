@@ -23,7 +23,7 @@ local-miui-modified-apps := InCallUI TeleService SecurityCenter
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
-local-density := XXHDPI
+local-density := XHDPI
 
 PORT_PRODUCT := a3lte_global
 
