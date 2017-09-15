@@ -1,0 +1,27 @@
+#!/system/bin/sh
+# Copyright (c) 2017, Stripalov. All rights reserved.
+# Disable CPU thermal protection
+echo 0 > /sys/module/msm_thermal/core_control/enabled
+# Set hispeed_freq
+echo 800000 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+chmod 0444 /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+# Set target_loads
+echo 50 800000:50 998400:60 1094400:70 1152000:80 1209600:90 > /sys/devices/system/cpu/cpufreq/interactive/target_loads
+chmod 0444 /sys/devices/system/cpu/cpufreq/interactive/target_loads
+# Set above_hispeed_delay
+echo 5000000 > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
+# Set go_hispeed_load
+echo 90 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
+echo 0444 /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
+# Fix timer_slack
+echo -1 > /sys/devices/system/cpu/cpufreq/interactive/timer_slack
+echo 0444 /sys/devices/system/cpu/cpufreq/interactive/timer_slack
+# Enable CPU thermal protection
+echo 1 > /sys/module/msm_thermal/core_control/enabled
+# Apply gaming tweaks
+echo 1 > /sys/devices/soc.0/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/force_bus_on
+echo 1 > /sys/devices/soc.0/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/force_rail_on
+echo 1 > /sys/devices/soc.0/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/force_clk_on
+echo 1000000 > /sys/devices/soc.0/1c00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/idle_timer
+# Enable performance governor for DDR bus 
+echo performance > /sys/devices/soc.0/qcom,cpubw.30/devfreq/qcom,cpubw.30/governor
