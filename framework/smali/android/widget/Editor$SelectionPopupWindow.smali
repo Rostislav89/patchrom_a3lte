@@ -97,6 +97,7 @@
     .line 4086
     iget-object v2, p0, Landroid/widget/Editor$SelectionPopupWindow;->this$0:Landroid/widget/Editor;
 
+    # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
     invoke-static {v2}, Landroid/widget/Editor;->access$800(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v2

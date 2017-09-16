@@ -49,6 +49,7 @@
 
     iget-object v1, v1, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
+    # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
     invoke-static {v1}, Landroid/widget/Editor;->access$800(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v1
@@ -57,6 +58,7 @@
 
     move-result v1
 
+    # invokes: Landroid/widget/Editor;->isOffsetVisible(I)Z
     invoke-static {v0, v1}, Landroid/widget/Editor;->access$1400(Landroid/widget/Editor;I)Z
 
     move-result v0
@@ -71,6 +73,7 @@
 
     iget-object v1, v1, Landroid/widget/Editor$ActionPinnedPopupWindow;->this$0:Landroid/widget/Editor;
 
+    # getter for: Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
     invoke-static {v1}, Landroid/widget/Editor;->access$800(Landroid/widget/Editor;)Landroid/widget/TextView;
 
     move-result-object v1
@@ -79,6 +82,7 @@
 
     move-result v1
 
+    # invokes: Landroid/widget/Editor;->isOffsetVisible(I)Z
     invoke-static {v0, v1}, Landroid/widget/Editor;->access$1400(Landroid/widget/Editor;I)Z
 
     move-result v0
@@ -122,6 +126,7 @@
 
     check-cast v0, Landroid/widget/Editor$InsertionHandleView;
 
+    # invokes: Landroid/widget/Editor$InsertionHandleView;->hideAfterDelay()V
     invoke-static {v0}, Landroid/widget/Editor$InsertionHandleView;->access$1700(Landroid/widget/Editor$InsertionHandleView;)V
 
     .line 2517

@@ -307,7 +307,9 @@
     .line 320
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    invoke-virtual {v6}, Landroid/widget/OverScroller$SplineOverScroller;->update()Z
+    const/4 v7, 0x0
+
+    invoke-virtual {v6, v7}, Landroid/widget/OverScroller$SplineOverScroller;->update(Z)Z
 
     move-result v6
 
@@ -316,7 +318,9 @@
     .line 321
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    invoke-virtual {v6}, Landroid/widget/OverScroller$SplineOverScroller;->continueWhenFinished()Z
+    iget-boolean v7, p0, Landroid/widget/OverScroller;->mSpringOverScrollEnable:Z
+
+    invoke-virtual {v6, v7}, Landroid/widget/OverScroller$SplineOverScroller;->continueWhenFinished(Z)Z
 
     move-result v6
 
@@ -340,7 +344,9 @@
     .line 328
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    invoke-virtual {v6}, Landroid/widget/OverScroller$SplineOverScroller;->update()Z
+    const/4 v7, 0x0
+
+    invoke-virtual {v6, v7}, Landroid/widget/OverScroller$SplineOverScroller;->update(Z)Z
 
     move-result v6
 
@@ -349,7 +355,9 @@
     .line 329
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    invoke-virtual {v6}, Landroid/widget/OverScroller$SplineOverScroller;->continueWhenFinished()Z
+    iget-boolean v7, p0, Landroid/widget/OverScroller;->mSpringOverScrollEnable:Z
+
+    invoke-virtual {v6, v7}, Landroid/widget/OverScroller$SplineOverScroller;->continueWhenFinished(Z)Z
 
     move-result v6
 

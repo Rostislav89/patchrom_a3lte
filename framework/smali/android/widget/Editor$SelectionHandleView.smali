@@ -333,6 +333,7 @@
 
     move-result-object v0
 
+    # getter for: Landroid/widget/Editor$SelectionModifierCursorController;->mTextSelectionModeEnable:Z
     invoke-static {v0}, Landroid/widget/Editor$SelectionModifierCursorController;->access$3700(Landroid/widget/Editor$SelectionModifierCursorController;)Z
 
     move-result v0

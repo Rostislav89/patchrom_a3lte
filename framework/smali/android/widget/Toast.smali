@@ -505,11 +505,22 @@
 
     .prologue
     .line 115
-    iget-object v4, p0, Landroid/widget/Toast;->mNextView:Landroid/view/View;
+    iget-object v4, p0, Landroid/widget/Toast;->mContext:Landroid/content/Context;
+
+    invoke-static {p0, v4}, Landroid/widget/ToastInjector;->interceptBackgroundToast(Landroid/widget/Toast;Landroid/content/Context;)Z
+
+    move-result v4
 
     if-nez v4, :cond_0
 
     .line 116
+    return-void
+
+    :cond_0
+    iget-object v4, p0, Landroid/widget/Toast;->mNextView:Landroid/view/View;
+
+    if-nez v4, :cond_1
+
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string/jumbo v5, "setView must have been called"
@@ -519,7 +530,7 @@
     throw v4
 
     .line 119
-    :cond_0
+    :cond_1
     invoke-static {}, Landroid/widget/Toast;->getService()Landroid/app/INotificationManager;
 
     move-result-object v2

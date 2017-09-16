@@ -484,6 +484,10 @@
     iput v1, p0, Landroid/widget/OverScroller$SplineOverScroller;->mState:I
 
     .line 640
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    iput v1, p0, Landroid/widget/OverScroller$SplineOverScroller;->mDecelerationScale:F
+
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
@@ -1161,7 +1165,7 @@
 .end method
 
 .method private startBounceAfterEdge(III)V
-    .locals 1
+    .locals 2
     .param p1, "start"    # I
     .param p2, "end"    # I
     .param p3, "velocity"    # I
@@ -1183,6 +1187,14 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/OverScroller$SplineOverScroller;->fitOnBounceCurve(III)V
 
     .line 814
+    iget v0, p0, Landroid/widget/OverScroller$SplineOverScroller;->mDeceleration:F
+
+    iget v1, p0, Landroid/widget/OverScroller$SplineOverScroller;->mDecelerationScale:F
+
+    mul-float/2addr v0, v1
+
+    iput v0, p0, Landroid/widget/OverScroller$SplineOverScroller;->mDeceleration:F
+
     invoke-direct {p0}, Landroid/widget/OverScroller$SplineOverScroller;->onEdgeReached()V
 
     .line 811
@@ -1228,6 +1240,10 @@
     invoke-static {v0}, Landroid/widget/OverScroller$SplineOverScroller;->getDeceleration(I)F
 
     move-result v1
+
+    iget v2, p0, Landroid/widget/OverScroller$SplineOverScroller;->mDecelerationScale:F
+
+    mul-float/2addr v1, v2
 
     iput v1, p0, Landroid/widget/OverScroller$SplineOverScroller;->mDeceleration:F
 
